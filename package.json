@@ -1,15 +1,16 @@
 {
-  "name": "create-tenon",
+  "name": "tenon-repo",
   "version": "0.0.0",
   "license": "MIT",
+  "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "preinstall": "npx only-allow pnpm",
     "preview": "vite preview",
     "format:check": "prettier --check .",
-    "format:write": "prettier --write .",
-    "build:config": "tsup ./config/tsup.config.ts"
+    "format:write": "prettier --write ."
   },
   "devDependencies": {
     "@eslint/eslintrc": "^2.0.2",
@@ -46,5 +47,10 @@
     "typescript": "^5.0.4",
     "vite": "^4.2.1",
     "yaml-eslint-parser": "^1.2.0"
+  },
+  "packageManager": "pnpm@8.1.1",
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.1.1"
   }
 }

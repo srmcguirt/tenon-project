@@ -16,5 +16,5 @@
     "noImplicitReturns": true,
     "skipLibCheck": true
   },
-  "include": ["packages/create-tenon/src", "vite.config.ts", "__tests__", "config"]
+  "include": ["packages", "vite.config.ts", "__tests__"]
 }

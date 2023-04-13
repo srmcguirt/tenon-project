@@ -2,10 +2,11 @@ import { defineConfig } from 'tsup'
 
 export default defineConfig({
   entry: {
-    lint: 'src/lint.ts',
+    standard: 'src/standard.ts',
   },
   format: ['esm'],
-  outDir: '.',
+  dts: true,
+  outDir: 'dist',
   splitting: false,
   sourcemap: false,
   clean: true,

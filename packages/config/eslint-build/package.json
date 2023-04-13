@@ -1,14 +1,18 @@
 {
-  "name": "eslint-config",
+  "name": "eslint-build",
   "private": true,
   "license": "MIT",
   "type": "module",
   "scripts": {
+    "build": "tsup",
+    "preinstall": "npx only-allow pnpm",
+    "print:standard": "npx eslint --print-config ./dist/standard.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "@eslint/eslintrc": "^2.0.2",
     "@eslint/js": "^8.38.0",
+    "destr": "^1.2.2",
     "eslint-config-prettier": "^8.8.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-import-resolver-typescript": "^3.5.5",
@@ -26,9 +30,12 @@
     "eslint-plugin-yml": "^1.5.0",
     "globals": "^13.20.0",
     "jsonc-eslint-parser": "^2.2.0",
+    "typia": "^3.7.5",
     "yaml-eslint-parser": "^1.2.0"
   },
   "devDependencies": {
+    "@types/eslint": "^8.37.0",
+    "@types/node": "^18.15.11",
     "@typescript-eslint/eslint-plugin": "^5.58.0",
     "@typescript-eslint/parser": "^5.58.0",
     "eslint": "^8.38.0",
