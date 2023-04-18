@@ -1,4 +1,4 @@
-import { configSets } from "./config-sets"
+import { configSets } from "./config-sets.js"
 
 export const ruleSets = {
   'import': configSets.import,

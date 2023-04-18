@@ -9,3 +9,9 @@ export const parsers = {
     tsParser
   }
 }
+
+export const parserExtensions = {
+  'babel': ['.js', '.mjs', '.cjs'],
+  'jsonc-eslint-parser': ['.json', '.jsonc'],
+  '@typescript-eslint/parser': ['.ts', '.tsx', '.mts', '.cts']
+}

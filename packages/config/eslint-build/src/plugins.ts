@@ -4,7 +4,7 @@ import pluginPromise from 'eslint-plugin-promise'
 import pluginJSONC from 'eslint-plugin-jsonc'
 import pluginTypescript from '@typescript-eslint/eslint-plugin'
 
-import { parsers } from './parsers'
+import { parsers } from './parsers.js'
 
 export const plugins = {
   'import': {

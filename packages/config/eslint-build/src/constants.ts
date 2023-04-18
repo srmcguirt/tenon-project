@@ -1,5 +1,5 @@
 import { resolve, dirname } from "node:path"
-import { URL, fileURLToPath } from "node:url"
+import { fileURLToPath } from "node:url"
 
 export const DIR_NAME = getDirMeta(import.meta).dirName
 export const DIR_PKG = resolve(DIR_NAME, '..')
