@@ -44,5 +44,13 @@
     "tsup": "^6.7.0",
     "typescript": "^5.0.4",
     "vite": "^4.2.1"
-  }
+  },
+  "engines": {
+    "node": ">=16.13.0"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "not dead"
+  ]
 }

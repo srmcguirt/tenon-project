@@ -7,19 +7,19 @@ import pluginTypescript from '@typescript-eslint/eslint-plugin'
 import { parsers } from './parsers.js'
 
 export const plugins = {
-  'import': {
-    ...pluginImport
+  import: {
+    ...pluginImport,
   },
-  'jsonc': {
-    ...pluginJSONC, parsers
+  jsonc: {
+    ...pluginJSONC, parsers,
   },
-  'n': {
-    ...pluginN
+  n: {
+    ...pluginN,
   },
-  'promise': {
-    ...pluginPromise
+  promise: {
+    ...pluginPromise,
   },
-  'typescript': {
-    ...pluginTypescript
-  }
+  typescript: {
+    ...pluginTypescript,
+  },
 }

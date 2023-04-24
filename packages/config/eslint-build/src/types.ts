@@ -37,3 +37,54 @@ export interface FindOptions {
 export interface FindPkgOptions {
   cwd?: string | URL
 }
+
+export interface ReadPkgOptions {
+  cwd?: string | URL
+}
+
+export interface ReadPkgResults {
+  packageJson: PkgJson
+  path: string
+}
+
+export interface PkgJsonEntryString { [key: string]: string }
+export interface PkgJsonEntryAny { [key: string]: any }
+export type PkgJsonPerson = string | { name: string; email?: string; url?: string }
+export type PkgJsonBugs = string | { url: string; email?: string }
+export type PkgJsonRepository = string | { type: string; url: string; directory?: string }
+export type PkgJsonBin = string | { [key: string]: string }
+export type PkgJsonType = 'module' | 'commonjs'
+export type PkgJsonExports =
+  | string
+  | Record<'import' | 'require' | '.' | 'node' | 'browser' | string, string | { [key: string]: string } | { [key: string]: { import: string; require?: string } }>
+
+export interface PkgJson {
+  name?: string
+  version?: string
+  description?: string
+  keywords?: string[]
+  homepage?: string
+  bugs?: PkgJsonBugs
+  license?: string
+  repository?: PkgJsonRepository
+  scripts?: PkgJsonEntryString
+  private?: boolean
+  author?: PkgJsonPerson
+  contributors?: PkgJsonPerson[]
+  files?: string[]
+  main?: string
+  browser?: string
+  bin?: PkgJsonBin
+  man?: string | string[]
+  dependencies?: PkgJsonEntryString
+  devDependencies?: PkgJsonEntryString
+  optionalDependencies?: PkgJsonEntryString
+  peerDependencies?: PkgJsonEntryString
+  types?: string
+  typings?: string
+  module?: string
+  type?: PkgJsonType
+  exports?: PkgJsonExports
+  workspaces?: string[]
+  [key: string]: any
+}
